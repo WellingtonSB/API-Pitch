@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;CadastroAlunos&apos; to &apos;Pitch-API&apos;&#x0D;&#x0A;- Original element: &apos;CadastroAlunos&apos;&#x0D;&#x0A;- Renamed element: &apos;CadastroAlunos&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;CadastroAlunos&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=CadastroAlunos" name="Pitch-API" references="true" stamp="1619847089555" version="1.0"/>
+</session>

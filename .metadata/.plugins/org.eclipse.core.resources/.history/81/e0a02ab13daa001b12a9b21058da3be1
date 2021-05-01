@@ -1,0 +1,5 @@
+package com.wsb.PitchAPI.controller;
+
+public class UsuarioController {
+
+}

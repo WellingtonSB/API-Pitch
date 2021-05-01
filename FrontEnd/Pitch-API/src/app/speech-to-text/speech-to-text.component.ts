@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pitch } from '../model/Pitch';
+import { AuthService } from '../service/auth.service';
 import { VoiceRecognitionService } from '../service/voice-recognition.service'
 
 @Component({
@@ -8,16 +10,26 @@ import { VoiceRecognitionService } from '../service/voice-recognition.service'
   providers: [VoiceRecognitionService]
 })
 export class SpeechToTextComponent implements OnInit {
-
+  pitch: Pitch = new Pitch
   text: string;
 
   constructor(
-    public service : VoiceRecognitionService
+    public service : VoiceRecognitionService,
+    private authService:AuthService
   ) { 
     this.service.init()
    }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+   
+  }
+
+  salvar()
+  {
+    this.authService.salvar(this.pitch).subscribe((resp:Pitch)=>{
+      this.pitch=resp
+      alert('pitch salvo com sucesso!')
+    })
   }
 
   startService(){
@@ -28,6 +40,7 @@ export class SpeechToTextComponent implements OnInit {
     this.service.stop()
   }
 
+  
 }
 
 
